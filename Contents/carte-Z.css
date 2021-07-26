@@ -1,0 +1,185 @@
+/*Mise en page*/
+	*
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+
+	img
+	{
+		height: calc(100%);
+		width: calc(100%);
+		position: absolute;
+		display: inline-block;
+		z-index: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+/*	body::before
+	{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(#ff0000, #ff00ff);
+		clip-path: circle(30% at right 70%);
+
+	}
+
+	body::after
+	{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(#00edff, #0000ff);
+		clip-path: circle(20% at 10% 10%);
+
+	}
+*/	
+
+.container
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	z-index: 10;
+}
+
+.container .card
+{
+	position: relative;
+	width: 400px;
+	height: 600px;
+	margin: 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);			/*modifiable*/
+	border-radius: 17px;									/*modifiable*/
+	background: rgba(29, 29, 27, .25);					/*modifiable*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 1);
+	border-left: 1px solid rgba(255, 255, 255, 1);			/**/
+	backdrop-filter: blur(5px);
+}
+
+/*Animation*/
+	.container .card .content
+	{
+		padding: 20px;
+		text-align: center;
+		transform: translateY(60px);							/*!*/
+		opacity: 0;												/*!*/
+		transition: 0.5s;
+	}
+
+	.container .card:hover .content
+	{
+		transform: translateY(0px);
+		opacity: 1;
+
+	}
+
+.container .card .content h2
+{
+	position: absolute;
+	top: 0px;
+	right: -20px;
+	font-size: 8em;
+	color: rgba(255, 255, 255, .05);
+	pointer-events: none;
+	font-family: kepler-std-semicondensed-dis,serif;
+	font-weight: 700;
+	font-style: normal;
+	z-index: 1;
+}
+
+.container .card .content h3
+{
+	font-size: 3em;
+	font-family: adobe-garamond-pro,serif;
+	font-weight: 900;
+	font-style: normal;
+	color: white;
+	z-index: 10;
+
+}
+
+.container .card .content p
+{
+	font-size: 1.3em;
+	color: #fff;
+	font-weight: 300;
+	font-family: liberation-serif,serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.container .card .content .button
+{
+	position: relative;
+	display: inline-block;
+	padding: 22px 55px;
+	margin-top: 15px;
+	border-radius: 500px;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: 500;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+h3
+{
+	margin-top: 60px;
+}
+
+.button
+{
+	background: linear-gradient(to right, #fff800, #fc8900, #ff00bd, #933e8f); 
+	-webkit-background-clip: text;						
+	-moz-background-clip: text; 
+	background-clip: text;
+	color: transparent;
+
+}
+
+.mail
+{
+	text-decoration: none;
+	color: white;
+}
+
+.mail:hover
+{
+	opacity: 0.25;
+	color: black;
+}
+
+/*
+	@media (max-width: 800px) 
+	{
+	  	.container 
+	  	{
+	  	width: calc(100%/3 - 200px - 2*10em);
+		}
+	}
+	*/
+
+
